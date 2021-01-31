@@ -1,7 +1,7 @@
 use std::collections::HashSet;
 
 fn main() {
-    let mut input = "vzbxkghb".to_string();
+    let input = "vzbxkghb".to_string();
 
     let next_password = get_next_password(input);
 
@@ -55,7 +55,7 @@ fn has_two_pairs_of_letters(input: &String) -> bool {
 }
 
 fn increment_password(input: String) -> String {
-    let mut inversed_input = input.chars().rev().collect::<String>();
+    let inversed_input = input.chars().rev().collect::<String>();
     let mut chars = inversed_input.chars();
 
     let mut result = String::new();
