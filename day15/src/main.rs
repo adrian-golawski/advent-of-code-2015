@@ -52,9 +52,9 @@ fn get_all_combinations_summing_to_n(n: i32) -> Vec<[i32; 4]> {
 
     // God, have mercy on all of us
     for a in 0..=n {
-        for b in 0..=n {
-            for c in 0..=n {
-                for d in 0..=n {
+        for b in 0..=n-a {
+            for c in 0..=n-a-b {
+                for d in 0..=n-a-b-c {
                     if (a + b + c + d) == n {
                         sums.push([a, b, c, d]);
                     }
